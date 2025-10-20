@@ -1,0 +1,42 @@
+buildscript {
+    ext {
+        buildToolsVersion = "36.0.0"
+        minSdkVersion = 23
+        compileSdkVersion = 36
+        targetSdkVersion = 36
+        ndkVersion = "26.1.10909125"
+        kotlinVersion = "1.9.24"
+    }
+    repositories {
+        google()
+        mavenCentral()
+        // maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        // classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+ Properties properties = new Properties()
+ properties.load(project.rootProject.file('local.properties').newDataInputStream())
+ def gituser = properties.getProperty('gpr.usr')
+ def gitpwd = properties.getProperty('gpr.key')
+ name = "GitHubPackages"
+ url = uri("https://maven.pkg.github.com/InfibeamAvenues/Dubai")
+ credentials {
+ username = "${gituser}"
+ password = "${gitpwd}"
+ }
+}
+    }
+}
+
+apply plugin: "com.facebook.react.rootproject"

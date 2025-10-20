@@ -26,14 +26,13 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -48,5 +47,43 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FuturaStdBold.otf</string>
+		<string>FuturaStdBoldOblique.otf</string>
+		<string>FuturaStdBook.otf</string>
+		<string>FuturaStdBookOblique.otf</string>
+		<string>FuturaStdCondensed.otf</string>
+		<string>FuturaStdCondensedBold.otf</string>
+		<string>FuturaStdCondensedBoldObl.otf</string>
+		<string>FuturaStdCondensedExtraBd.otf</string>
+		<string>FuturaStdCondensedLight.otf</string>
+		<string>FuturaStdCondensedLightObl.otf</string>
+		<string>FuturaStdCondensedOblique.otf</string>
+		<string>FuturaStdCondExtraBoldObl.otf</string>
+		<string>FuturaStdExtraBold.otf</string>
+		<string>FuturaStdExtraBoldOblique.otf</string>
+		<string>FuturaStdHeavy.otf</string>
+		<string>FuturaStdHeavyOblique.otf</string>
+		<string>FuturaStdLight.otf</string>
+		<string>FuturaStdLightOblique.otf</string>
+		<string>FuturaStdMedium.otf</string>
+		<string>FuturaStdMediumOblique.otf</string>
+		<string>FioriDoratiRegular-3zggX.ttf</string>
+		<string>PlayfairDisplay-Black.ttf</string>
+		<string>PlayfairDisplay-BlackItalic.ttf</string>
+		<string>PlayfairDisplay-Bold.ttf</string>
+		<string>PlayfairDisplay-BoldItalic.ttf</string>
+		<string>PlayfairDisplay-ExtraBold.ttf</string>
+		<string>PlayfairDisplay-ExtraBoldItalic.ttf</string>
+		<string>PlayfairDisplay-Italic.ttf</string>
+		<string>PlayfairDisplay-Medium.ttf</string>
+		<string>PlayfairDisplay-MediumItalic.ttf</string>
+		<string>PlayfairDisplay-Regular.ttf</string>
+		<string>PlayfairDisplay-SemiBold.ttf</string>
+		<string>PlayfairDisplay-SemiBoldItalic.ttf</string>
+		<string>ChronicleDisp-Bold.otf</string>
+		<string>ChronicleDisp-Semibold.otf</string>
+	</array>
 </dict>
 </plist>

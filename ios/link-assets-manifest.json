@@ -1,0 +1,145 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/ChronicleDisp-Bold.otf",
+      "sha1": "8eeac25c9972ed81b82c06184367e07d62b16f39"
+    },
+    {
+      "path": "assets/fonts/ChronicleDisp-Semibold.otf",
+      "sha1": "2023465bf31af827fc97d0e4d474eb2d650da29a"
+    },
+    {
+      "path": "assets/fonts/FioriDoratiRegular-3zggX.ttf",
+      "sha1": "afd50bcffde916b2aef605626fbc1a2881568089"
+    },
+    {
+      "path": "assets/fonts/FuturaStdBold.otf",
+      "sha1": "4acca6749045d414d333cdb1821d936816362812"
+    },
+    {
+      "path": "assets/fonts/FuturaStdBoldOblique.otf",
+      "sha1": "ccb1c6ec0bc8d2f993bb77dc6b6cd8891466ca18"
+    },
+    {
+      "path": "assets/fonts/FuturaStdBook.otf",
+      "sha1": "b97134d14404e5eb9ea1efe0988edbfd3788dd77"
+    },
+    {
+      "path": "assets/fonts/FuturaStdBookOblique.otf",
+      "sha1": "1e534ff9d2173cafe9874c30e0c7736926d03bf6"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensed.otf",
+      "sha1": "2578ecf87a1de75db0e27b2881febca5846fb16e"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensedBold.otf",
+      "sha1": "dc18fc44f0e2c054c8c63595f6ddf166da35175a"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensedBoldObl.otf",
+      "sha1": "ac5eb8b35b955ac5b43911c2586684bf1a7e45e9"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensedExtraBd.otf",
+      "sha1": "b9c2a1c8e2fe10f10c7fd2b04bbfb88835b2866d"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensedLight.otf",
+      "sha1": "2171c5d0e1f14aa5938d4cdc47901d2933aac63c"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensedLightObl.otf",
+      "sha1": "14e725b31ae074d1e6090711f8787c20fba1773c"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondensedOblique.otf",
+      "sha1": "b180c3125ebc6bcce71d2700133abf68e8f977aa"
+    },
+    {
+      "path": "assets/fonts/FuturaStdCondExtraBoldObl.otf",
+      "sha1": "e545ba722e0e866845f42bfbe5136ea36ac9a18e"
+    },
+    {
+      "path": "assets/fonts/FuturaStdExtraBold.otf",
+      "sha1": "65a14af8da554e2ada14f40c3d18c276bd3688a9"
+    },
+    {
+      "path": "assets/fonts/FuturaStdExtraBoldOblique.otf",
+      "sha1": "df57671d2dd3421b593a823b54f2931fe6cc09a6"
+    },
+    {
+      "path": "assets/fonts/FuturaStdHeavy.otf",
+      "sha1": "7656b62c3d416fded0cea5215f55956fa12f9a6f"
+    },
+    {
+      "path": "assets/fonts/FuturaStdHeavyOblique.otf",
+      "sha1": "1490bc7dac976bdf262ccdba79c56b62c08b53a4"
+    },
+    {
+      "path": "assets/fonts/FuturaStdLight.otf",
+      "sha1": "1ed57373ae833eff25e5bf8d7897f1a709152f28"
+    },
+    {
+      "path": "assets/fonts/FuturaStdLightOblique.otf",
+      "sha1": "b9262aa8fb092039a5a428f67c24f1206e9f2d48"
+    },
+    {
+      "path": "assets/fonts/FuturaStdMedium.otf",
+      "sha1": "61b4c601351f1ba82710e0da38a2a6d4bd1c6271"
+    },
+    {
+      "path": "assets/fonts/FuturaStdMediumOblique.otf",
+      "sha1": "c4b940690aa573888c923c9c76bb3959750a3cfb"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Black.ttf",
+      "sha1": "ac1ab1b54b6edc5e52dbffc5cb06554b742ad080"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-BlackItalic.ttf",
+      "sha1": "1a9b420221cc0883bb8052ac0515047aad46969f"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Bold.ttf",
+      "sha1": "57360f49f076d7bdd7a9e1e93abf3bed7d56d726"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-BoldItalic.ttf",
+      "sha1": "5e5a5d9a16f0c8a5ffd6afbc5ffa5b5af51916b1"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-ExtraBold.ttf",
+      "sha1": "1e31527131b2ff9019ccba56ac57e84c2612393a"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-ExtraBoldItalic.ttf",
+      "sha1": "d230fbcd92f90944c543a9e39dbc8bd49ed89d2d"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Italic.ttf",
+      "sha1": "dffe6fa2688bf379ec6a33a9507e70af6fc2b39c"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Medium.ttf",
+      "sha1": "de85ce98fad06daf64f86d670e13fa3ecef5b515"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-MediumItalic.ttf",
+      "sha1": "96456a5921dbec77ee23ed839c9f449abb43948c"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-Regular.ttf",
+      "sha1": "3e12c2cf422de852cd0af0227179901b155abf14"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-SemiBold.ttf",
+      "sha1": "7fa24e8796734ec17d72f1e97cfb5d427508e337"
+    },
+    {
+      "path": "assets/fonts/PlayfairDisplay-SemiBoldItalic.ttf",
+      "sha1": "f31580d7e567c50400544996e014dfeca9aaa9c7"
+    }
+  ]
+}

@@ -14,6 +14,41 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-Citidev-CitidevTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Citidev-CitidevTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		BBE0415B4285431B943D6CC8 /* FuturaStdBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 441E89DA6723401EA09BBA2F /* FuturaStdBold.otf */; };
+		A36258EA950F4590B1A03C55 /* FuturaStdBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEFC56C361604487B50DF067 /* FuturaStdBoldOblique.otf */; };
+		375CA435AAA64CFF9B3720BA /* FuturaStdBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55FE0E83D3BB416F9368429E /* FuturaStdBook.otf */; };
+		4EE671014EB44521B32BBD16 /* FuturaStdBookOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 100CF4B43BD1431DB1E1862D /* FuturaStdBookOblique.otf */; };
+		44C155D0715D41EBA363228D /* FuturaStdCondensed.otf in Resources */ = {isa = PBXBuildFile; fileRef = FEB68ABF7A864DFC8CB969D8 /* FuturaStdCondensed.otf */; };
+		606AFF0FB06E49B0848C9330 /* FuturaStdCondensedBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A6B6C2ED202E4403915F9401 /* FuturaStdCondensedBold.otf */; };
+		1C12CBD73AAA43B0AD088EC8 /* FuturaStdCondensedBoldObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2040C62A5DC4A4DBD8B2019 /* FuturaStdCondensedBoldObl.otf */; };
+		59534BBFC3324633B403D0A0 /* FuturaStdCondensedExtraBd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 239CFF7630324E6AAEF6B57F /* FuturaStdCondensedExtraBd.otf */; };
+		E8E23531F3C946DEB974A291 /* FuturaStdCondensedLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD3739F83C7424986978DA3 /* FuturaStdCondensedLight.otf */; };
+		D044F1B782154E94B53D5049 /* FuturaStdCondensedLightObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = B72B615D8A4642CC9675EB39 /* FuturaStdCondensedLightObl.otf */; };
+		253DD9726FFD4DF99933724F /* FuturaStdCondensedOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1035A0AE5F234046B7E5B068 /* FuturaStdCondensedOblique.otf */; };
+		740A27AC859442868E649E42 /* FuturaStdCondExtraBoldObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = F4660B8AB2D04DEB9039B973 /* FuturaStdCondExtraBoldObl.otf */; };
+		0D91E6FF51954135A5BEED42 /* FuturaStdExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 21244142168D4D30B66D249B /* FuturaStdExtraBold.otf */; };
+		37C5CCC4BAF34811A1406F33 /* FuturaStdExtraBoldOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA815948EE1F47F9BAFB8938 /* FuturaStdExtraBoldOblique.otf */; };
+		33F7650060994CF2ABB74BFD /* FuturaStdHeavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 39A20531456E45F99C8852BD /* FuturaStdHeavy.otf */; };
+		6AFFF73A2185446B8BEE7272 /* FuturaStdHeavyOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = FCBC87A114864A8DBAA79C47 /* FuturaStdHeavyOblique.otf */; };
+		EF2538E5A3F548CDAD41A62B /* FuturaStdLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5F1562CFC8904198A33DE27F /* FuturaStdLight.otf */; };
+		981EFB4A5E6A45A9A43BEC07 /* FuturaStdLightOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 88520EFA457F4B71B291A3E3 /* FuturaStdLightOblique.otf */; };
+		ECE89955CD4C4C25BC80CC7F /* FuturaStdMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4724A600B2A4D969A168A4E /* FuturaStdMedium.otf */; };
+		0FF4AEE26047429DB0C97EA1 /* FuturaStdMediumOblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABF332042FFA405AB537F682 /* FuturaStdMediumOblique.otf */; };
+		ABDF3EB9E7CD48BFAB02CFE2 /* FioriDoratiRegular-3zggX.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D72E9A890B2B49E2BBA57117 /* FioriDoratiRegular-3zggX.ttf */; };
+		4401B6E742FD46C0ADE95EFF /* PlayfairDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC5DF810954420EBE17402B /* PlayfairDisplay-Black.ttf */; };
+		B472DABEC41D41768AAA9B28 /* PlayfairDisplay-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2547ED8C8F4C4C90A2EB1F5D /* PlayfairDisplay-BlackItalic.ttf */; };
+		E52E92CCB7FD414C9275399B /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CE57636FEC54D18B98812E1 /* PlayfairDisplay-Bold.ttf */; };
+		C963BAD8BE91402E8316571B /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE964D023F1641079B638239 /* PlayfairDisplay-BoldItalic.ttf */; };
+		7C42399F4E4244389890B5B7 /* PlayfairDisplay-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37C362EBC171439DABCEB889 /* PlayfairDisplay-ExtraBold.ttf */; };
+		E044666E40DD4B7EA5EE4E8D /* PlayfairDisplay-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2926A9D4E3A4C2FB42B6C0E /* PlayfairDisplay-ExtraBoldItalic.ttf */; };
+		2391A0411EF841D7908AB61B /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFCD4DCC8B444A4F8DEBB54D /* PlayfairDisplay-Italic.ttf */; };
+		1CCC0B6E5B1243849DF71E88 /* PlayfairDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4EEEAA6454A4F7986FF52AA /* PlayfairDisplay-Medium.ttf */; };
+		8180B4F80FD244A99563504F /* PlayfairDisplay-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65271A42CB5A4EFA9ACAD1E6 /* PlayfairDisplay-MediumItalic.ttf */; };
+		30264628C2A940F984909546 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D89B0D97C145C4BB02B311 /* PlayfairDisplay-Regular.ttf */; };
+		38338E3BB55C4E92A201BF1E /* PlayfairDisplay-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F23BDE5DCA49B080677BAC /* PlayfairDisplay-SemiBold.ttf */; };
+		9110EBCDFDBE430591389A58 /* PlayfairDisplay-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78EC1C10B5BE40A2A891A815 /* PlayfairDisplay-SemiBoldItalic.ttf */; };
+		4AE49316D0E545E0B84E0235 /* ChronicleDisp-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 419239248C8341E3A2413DE8 /* ChronicleDisp-Bold.otf */; };
+		96B91EBEA5084AA7A3831C0B /* ChronicleDisp-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0067C252A1EF41CA970FFFAF /* ChronicleDisp-Semibold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +80,41 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Citidev/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Citidev-CitidevTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Citidev-CitidevTests.release.xcconfig"; path = "Target Support Files/Pods-Citidev-CitidevTests/Pods-Citidev-CitidevTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		441E89DA6723401EA09BBA2F /* FuturaStdBold.otf */ = {isa = PBXFileReference; name = "FuturaStdBold.otf"; path = "../assets/fonts/FuturaStdBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EEFC56C361604487B50DF067 /* FuturaStdBoldOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdBoldOblique.otf"; path = "../assets/fonts/FuturaStdBoldOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55FE0E83D3BB416F9368429E /* FuturaStdBook.otf */ = {isa = PBXFileReference; name = "FuturaStdBook.otf"; path = "../assets/fonts/FuturaStdBook.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		100CF4B43BD1431DB1E1862D /* FuturaStdBookOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdBookOblique.otf"; path = "../assets/fonts/FuturaStdBookOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FEB68ABF7A864DFC8CB969D8 /* FuturaStdCondensed.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensed.otf"; path = "../assets/fonts/FuturaStdCondensed.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A6B6C2ED202E4403915F9401 /* FuturaStdCondensedBold.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensedBold.otf"; path = "../assets/fonts/FuturaStdCondensedBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D2040C62A5DC4A4DBD8B2019 /* FuturaStdCondensedBoldObl.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensedBoldObl.otf"; path = "../assets/fonts/FuturaStdCondensedBoldObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		239CFF7630324E6AAEF6B57F /* FuturaStdCondensedExtraBd.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensedExtraBd.otf"; path = "../assets/fonts/FuturaStdCondensedExtraBd.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BD3739F83C7424986978DA3 /* FuturaStdCondensedLight.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensedLight.otf"; path = "../assets/fonts/FuturaStdCondensedLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B72B615D8A4642CC9675EB39 /* FuturaStdCondensedLightObl.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensedLightObl.otf"; path = "../assets/fonts/FuturaStdCondensedLightObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1035A0AE5F234046B7E5B068 /* FuturaStdCondensedOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdCondensedOblique.otf"; path = "../assets/fonts/FuturaStdCondensedOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F4660B8AB2D04DEB9039B973 /* FuturaStdCondExtraBoldObl.otf */ = {isa = PBXFileReference; name = "FuturaStdCondExtraBoldObl.otf"; path = "../assets/fonts/FuturaStdCondExtraBoldObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		21244142168D4D30B66D249B /* FuturaStdExtraBold.otf */ = {isa = PBXFileReference; name = "FuturaStdExtraBold.otf"; path = "../assets/fonts/FuturaStdExtraBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BA815948EE1F47F9BAFB8938 /* FuturaStdExtraBoldOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdExtraBoldOblique.otf"; path = "../assets/fonts/FuturaStdExtraBoldOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		39A20531456E45F99C8852BD /* FuturaStdHeavy.otf */ = {isa = PBXFileReference; name = "FuturaStdHeavy.otf"; path = "../assets/fonts/FuturaStdHeavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FCBC87A114864A8DBAA79C47 /* FuturaStdHeavyOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdHeavyOblique.otf"; path = "../assets/fonts/FuturaStdHeavyOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5F1562CFC8904198A33DE27F /* FuturaStdLight.otf */ = {isa = PBXFileReference; name = "FuturaStdLight.otf"; path = "../assets/fonts/FuturaStdLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		88520EFA457F4B71B291A3E3 /* FuturaStdLightOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdLightOblique.otf"; path = "../assets/fonts/FuturaStdLightOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A4724A600B2A4D969A168A4E /* FuturaStdMedium.otf */ = {isa = PBXFileReference; name = "FuturaStdMedium.otf"; path = "../assets/fonts/FuturaStdMedium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ABF332042FFA405AB537F682 /* FuturaStdMediumOblique.otf */ = {isa = PBXFileReference; name = "FuturaStdMediumOblique.otf"; path = "../assets/fonts/FuturaStdMediumOblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D72E9A890B2B49E2BBA57117 /* FioriDoratiRegular-3zggX.ttf */ = {isa = PBXFileReference; name = "FioriDoratiRegular-3zggX.ttf"; path = "../assets/fonts/FioriDoratiRegular-3zggX.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CAC5DF810954420EBE17402B /* PlayfairDisplay-Black.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-Black.ttf"; path = "../assets/fonts/PlayfairDisplay-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2547ED8C8F4C4C90A2EB1F5D /* PlayfairDisplay-BlackItalic.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-BlackItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2CE57636FEC54D18B98812E1 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-Bold.ttf"; path = "../assets/fonts/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE964D023F1641079B638239 /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-BoldItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37C362EBC171439DABCEB889 /* PlayfairDisplay-ExtraBold.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-ExtraBold.ttf"; path = "../assets/fonts/PlayfairDisplay-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E2926A9D4E3A4C2FB42B6C0E /* PlayfairDisplay-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-ExtraBoldItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AFCD4DCC8B444A4F8DEBB54D /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-Italic.ttf"; path = "../assets/fonts/PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A4EEEAA6454A4F7986FF52AA /* PlayfairDisplay-Medium.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-Medium.ttf"; path = "../assets/fonts/PlayfairDisplay-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		65271A42CB5A4EFA9ACAD1E6 /* PlayfairDisplay-MediumItalic.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-MediumItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		73D89B0D97C145C4BB02B311 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-Regular.ttf"; path = "../assets/fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		97F23BDE5DCA49B080677BAC /* PlayfairDisplay-SemiBold.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-SemiBold.ttf"; path = "../assets/fonts/PlayfairDisplay-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		78EC1C10B5BE40A2A891A815 /* PlayfairDisplay-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "PlayfairDisplay-SemiBoldItalic.ttf"; path = "../assets/fonts/PlayfairDisplay-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		419239248C8341E3A2413DE8 /* ChronicleDisp-Bold.otf */ = {isa = PBXFileReference; name = "ChronicleDisp-Bold.otf"; path = "../assets/fonts/ChronicleDisp-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0067C252A1EF41CA970FFFAF /* ChronicleDisp-Semibold.otf */ = {isa = PBXFileReference; name = "ChronicleDisp-Semibold.otf"; path = "../assets/fonts/ChronicleDisp-Semibold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +194,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				01B700B9502E4CF0B3C8FD1E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -149,6 +220,49 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		01B700B9502E4CF0B3C8FD1E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				441E89DA6723401EA09BBA2F /* FuturaStdBold.otf */,
+				EEFC56C361604487B50DF067 /* FuturaStdBoldOblique.otf */,
+				55FE0E83D3BB416F9368429E /* FuturaStdBook.otf */,
+				100CF4B43BD1431DB1E1862D /* FuturaStdBookOblique.otf */,
+				FEB68ABF7A864DFC8CB969D8 /* FuturaStdCondensed.otf */,
+				A6B6C2ED202E4403915F9401 /* FuturaStdCondensedBold.otf */,
+				D2040C62A5DC4A4DBD8B2019 /* FuturaStdCondensedBoldObl.otf */,
+				239CFF7630324E6AAEF6B57F /* FuturaStdCondensedExtraBd.otf */,
+				9BD3739F83C7424986978DA3 /* FuturaStdCondensedLight.otf */,
+				B72B615D8A4642CC9675EB39 /* FuturaStdCondensedLightObl.otf */,
+				1035A0AE5F234046B7E5B068 /* FuturaStdCondensedOblique.otf */,
+				F4660B8AB2D04DEB9039B973 /* FuturaStdCondExtraBoldObl.otf */,
+				21244142168D4D30B66D249B /* FuturaStdExtraBold.otf */,
+				BA815948EE1F47F9BAFB8938 /* FuturaStdExtraBoldOblique.otf */,
+				39A20531456E45F99C8852BD /* FuturaStdHeavy.otf */,
+				FCBC87A114864A8DBAA79C47 /* FuturaStdHeavyOblique.otf */,
+				5F1562CFC8904198A33DE27F /* FuturaStdLight.otf */,
+				88520EFA457F4B71B291A3E3 /* FuturaStdLightOblique.otf */,
+				A4724A600B2A4D969A168A4E /* FuturaStdMedium.otf */,
+				ABF332042FFA405AB537F682 /* FuturaStdMediumOblique.otf */,
+				D72E9A890B2B49E2BBA57117 /* FioriDoratiRegular-3zggX.ttf */,
+				CAC5DF810954420EBE17402B /* PlayfairDisplay-Black.ttf */,
+				2547ED8C8F4C4C90A2EB1F5D /* PlayfairDisplay-BlackItalic.ttf */,
+				2CE57636FEC54D18B98812E1 /* PlayfairDisplay-Bold.ttf */,
+				FE964D023F1641079B638239 /* PlayfairDisplay-BoldItalic.ttf */,
+				37C362EBC171439DABCEB889 /* PlayfairDisplay-ExtraBold.ttf */,
+				E2926A9D4E3A4C2FB42B6C0E /* PlayfairDisplay-ExtraBoldItalic.ttf */,
+				AFCD4DCC8B444A4F8DEBB54D /* PlayfairDisplay-Italic.ttf */,
+				A4EEEAA6454A4F7986FF52AA /* PlayfairDisplay-Medium.ttf */,
+				65271A42CB5A4EFA9ACAD1E6 /* PlayfairDisplay-MediumItalic.ttf */,
+				73D89B0D97C145C4BB02B311 /* PlayfairDisplay-Regular.ttf */,
+				97F23BDE5DCA49B080677BAC /* PlayfairDisplay-SemiBold.ttf */,
+				78EC1C10B5BE40A2A891A815 /* PlayfairDisplay-SemiBoldItalic.ttf */,
+				419239248C8341E3A2413DE8 /* ChronicleDisp-Bold.otf */,
+				0067C252A1EF41CA970FFFAF /* ChronicleDisp-Semibold.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +359,41 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				BBE0415B4285431B943D6CC8 /* FuturaStdBold.otf in Resources */,
+				A36258EA950F4590B1A03C55 /* FuturaStdBoldOblique.otf in Resources */,
+				375CA435AAA64CFF9B3720BA /* FuturaStdBook.otf in Resources */,
+				4EE671014EB44521B32BBD16 /* FuturaStdBookOblique.otf in Resources */,
+				44C155D0715D41EBA363228D /* FuturaStdCondensed.otf in Resources */,
+				606AFF0FB06E49B0848C9330 /* FuturaStdCondensedBold.otf in Resources */,
+				1C12CBD73AAA43B0AD088EC8 /* FuturaStdCondensedBoldObl.otf in Resources */,
+				59534BBFC3324633B403D0A0 /* FuturaStdCondensedExtraBd.otf in Resources */,
+				E8E23531F3C946DEB974A291 /* FuturaStdCondensedLight.otf in Resources */,
+				D044F1B782154E94B53D5049 /* FuturaStdCondensedLightObl.otf in Resources */,
+				253DD9726FFD4DF99933724F /* FuturaStdCondensedOblique.otf in Resources */,
+				740A27AC859442868E649E42 /* FuturaStdCondExtraBoldObl.otf in Resources */,
+				0D91E6FF51954135A5BEED42 /* FuturaStdExtraBold.otf in Resources */,
+				37C5CCC4BAF34811A1406F33 /* FuturaStdExtraBoldOblique.otf in Resources */,
+				33F7650060994CF2ABB74BFD /* FuturaStdHeavy.otf in Resources */,
+				6AFFF73A2185446B8BEE7272 /* FuturaStdHeavyOblique.otf in Resources */,
+				EF2538E5A3F548CDAD41A62B /* FuturaStdLight.otf in Resources */,
+				981EFB4A5E6A45A9A43BEC07 /* FuturaStdLightOblique.otf in Resources */,
+				ECE89955CD4C4C25BC80CC7F /* FuturaStdMedium.otf in Resources */,
+				0FF4AEE26047429DB0C97EA1 /* FuturaStdMediumOblique.otf in Resources */,
+				ABDF3EB9E7CD48BFAB02CFE2 /* FioriDoratiRegular-3zggX.ttf in Resources */,
+				4401B6E742FD46C0ADE95EFF /* PlayfairDisplay-Black.ttf in Resources */,
+				B472DABEC41D41768AAA9B28 /* PlayfairDisplay-BlackItalic.ttf in Resources */,
+				E52E92CCB7FD414C9275399B /* PlayfairDisplay-Bold.ttf in Resources */,
+				C963BAD8BE91402E8316571B /* PlayfairDisplay-BoldItalic.ttf in Resources */,
+				7C42399F4E4244389890B5B7 /* PlayfairDisplay-ExtraBold.ttf in Resources */,
+				E044666E40DD4B7EA5EE4E8D /* PlayfairDisplay-ExtraBoldItalic.ttf in Resources */,
+				2391A0411EF841D7908AB61B /* PlayfairDisplay-Italic.ttf in Resources */,
+				1CCC0B6E5B1243849DF71E88 /* PlayfairDisplay-Medium.ttf in Resources */,
+				8180B4F80FD244A99563504F /* PlayfairDisplay-MediumItalic.ttf in Resources */,
+				30264628C2A940F984909546 /* PlayfairDisplay-Regular.ttf in Resources */,
+				38338E3BB55C4E92A201BF1E /* PlayfairDisplay-SemiBold.ttf in Resources */,
+				9110EBCDFDBE430591389A58 /* PlayfairDisplay-SemiBoldItalic.ttf in Resources */,
+				4AE49316D0E545E0B84E0235 /* ChronicleDisp-Bold.otf in Resources */,
+				96B91EBEA5084AA7A3831C0B /* ChronicleDisp-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
