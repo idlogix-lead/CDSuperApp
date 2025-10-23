@@ -39,7 +39,7 @@ export default function PayScheduleScrn({navigation}) {
 
       // 2️⃣ Fetch summary by C_BPartner_ID
       const summaryResponse = await instance.get(
-        `/v1/models/MBL_Custinstall_Summary_V?$filter=C_BPartner_ID eq ${bPartnerId}`,
+        `/v1/models/MBL_Custinstall_Summary_V`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export default function PayScheduleScrn({navigation}) {
               <Text style={styles.timelineText}>
                 {item.DateInvoiced
                   ? new Date(item.DateInvoiced).toLocaleDateString('en-GB', {
-                      // day: '2-digit',
+                      day: '2-digit',
                       month: 'short',
                       year: 'numeric',
                     })
@@ -130,6 +130,34 @@ export default function PayScheduleScrn({navigation}) {
         </ScrollView>
 
         {/* Payment Cards */}
+        {/* <View style={{flex: 1, alignItems: 'center'}}>
+          {payments.map((pay, index) => (
+            <View
+              key={index}
+              style={[
+                styles.card,
+                pay?.OpenAmt > 0
+                  ? styles.cardPending // Pending if amount > 0
+                  : styles.cardPaid,
+              ]}>
+              <View style={styles.cardHeader}>
+                <Text style={styles.dateText}>
+                  Date: {pay.DateInvoiced ? pay.DateInvoiced.split('T')[0] : ''}
+                </Text>
+                <Text
+                  style={[
+                    styles.statusText,
+                    pay?.OpenAmt > 0 ? styles.statusPending : styles.statusPaid,
+                  ]}>
+                  {pay?.OpenAmt > 0 ? 'Pending' : 'Paid'}
+                </Text>
+              </View>
+              <Text style={styles.amount}>
+                AED {Number(pay.InvoiceAmt || 0).toFixed(2)}
+              </Text>
+            </View>
+          ))}
+        </View> */}
         <View style={{flex: 1, alignItems: 'center'}}>
           {payments.map((pay, index) => {
             const invoiceDate = pay?.DateInvoiced
@@ -150,7 +178,7 @@ export default function PayScheduleScrn({navigation}) {
             // Determine card style based on status
             const cardStyle =
               status === 'Overdue'
-                ? styles.cardOverdue
+                ? styles.cardPending
                 : status === 'Paid'
                 ? styles.cardPaid
                 : styles.cardPending;
@@ -158,7 +186,7 @@ export default function PayScheduleScrn({navigation}) {
             // Handle card press
             const handlePress = () => {
               if (status === 'Pending' || status === 'Overdue') {
-                navigation.navigate('PayOptions', {payment: pay});
+                navigation.navigate('PayReminderScrn', {payment: pay});
               }
             };
 

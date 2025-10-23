@@ -39,7 +39,7 @@ export default function PayScheduleScrn({navigation}) {
 
       // 2️⃣ Fetch summary by C_BPartner_ID
       const summaryResponse = await instance.get(
-        `/v1/models/MBL_Custinstall_Summary_V?$filter=C_BPartner_ID eq ${bPartnerId}`,
+        `/v1/models/MBL_Custinstall_Summary_V`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export default function PayScheduleScrn({navigation}) {
               <Text style={styles.timelineText}>
                 {item.DateInvoiced
                   ? new Date(item.DateInvoiced).toLocaleDateString('en-GB', {
-                      // day: '2-digit',
+                      day: '2-digit',
                       month: 'short',
                       year: 'numeric',
                     })
@@ -150,7 +150,7 @@ export default function PayScheduleScrn({navigation}) {
             // Determine card style based on status
             const cardStyle =
               status === 'Overdue'
-                ? styles.cardOverdue
+                ? styles.cardPending
                 : status === 'Paid'
                 ? styles.cardPaid
                 : styles.cardPending;

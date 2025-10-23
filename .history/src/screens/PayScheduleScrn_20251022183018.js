@@ -119,7 +119,7 @@ export default function PayScheduleScrn({navigation}) {
               <Text style={styles.timelineText}>
                 {item.DateInvoiced
                   ? new Date(item.DateInvoiced).toLocaleDateString('en-GB', {
-                      // day: '2-digit',
+                      day: '2-digit',
                       month: 'short',
                       year: 'numeric',
                     })
@@ -130,8 +130,37 @@ export default function PayScheduleScrn({navigation}) {
         </ScrollView>
 
         {/* Payment Cards */}
+        {/* <View style={{flex: 1, alignItems: 'center'}}>
+          {payments.map((pay, index) => (
+            <View
+              key={index}
+              style={[
+                styles.card,
+                pay?.OpenAmt > 0
+                  ? styles.cardPending // Pending if amount > 0
+                  : styles.cardPaid,
+              ]}>
+              <View style={styles.cardHeader}>
+                <Text style={styles.dateText}>
+                  Date: {pay.DateInvoiced ? pay.DateInvoiced.split('T')[0] : ''}
+                </Text>
+                <Text
+                  style={[
+                    styles.statusText,
+                    pay?.OpenAmt > 0 ? styles.statusPending : styles.statusPaid,
+                  ]}>
+                  {pay?.OpenAmt > 0 ? 'Pending' : 'Paid'}
+                </Text>
+              </View>
+              <Text style={styles.amount}>
+                AED {Number(pay.InvoiceAmt || 0).toFixed(2)}
+              </Text>
+            </View>
+          ))}
+        </View> */}
         <View style={{flex: 1, alignItems: 'center'}}>
           {payments.map((pay, index) => {
+            // Convert invoice date to JS Date
             const invoiceDate = pay?.DateInvoiced
               ? new Date(pay.DateInvoiced)
               : null;
@@ -147,28 +176,17 @@ export default function PayScheduleScrn({navigation}) {
               }
             }
 
-            // Determine card style based on status
-            const cardStyle =
-              status === 'Overdue'
-                ? styles.cardOverdue
-                : status === 'Paid'
-                ? styles.cardPaid
-                : styles.cardPending;
-
-            // Handle card press
-            const handlePress = () => {
-              if (status === 'Pending' || status === 'Overdue') {
-                navigation.navigate('PayOptions', {payment: pay});
-              }
-            };
-
             return (
-              <TouchableOpacity
+              <View
                 key={index}
-                activeOpacity={status === 'Paid' ? 1 : 0.7} // no opacity feedback for Paid
-                onPress={handlePress}
-                disabled={status === 'Paid'} // disable press for Paid
-                style={[styles.card, cardStyle]}>
+                style={[
+                  styles.card,
+                  status === 'Overdue'
+                    ? styles.cardOverdue
+                    : status === 'Paid'
+                    ? styles.cardPaid
+                    : styles.cardPending,
+                ]}>
                 <View style={styles.cardHeader}>
                   <Text style={styles.dateText}>
                     Date:{' '}
@@ -180,7 +198,6 @@ export default function PayScheduleScrn({navigation}) {
                         })
                       : ''}
                   </Text>
-
                   <Text
                     style={[
                       styles.statusText,
@@ -197,7 +214,7 @@ export default function PayScheduleScrn({navigation}) {
                 <Text style={styles.amount}>
                   AED {Number(pay.InvoiceAmt || 0).toFixed(2)}
                 </Text>
-              </TouchableOpacity>
+              </View>
             );
           })}
         </View>
