@@ -14,6 +14,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import instance from '../BaseURL/BaseUrl';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Header from '../components/Header/Header';
+
 const {CCAvenueModule} = NativeModules;
 
 export default function PayDetails({navigation}) {
@@ -63,6 +64,44 @@ export default function PayDetails({navigation}) {
   //     console.error('CCAvenue Error:', error);
   //   }
   // };
+
+//   const allowedCardNetworks = ['VISA', 'MASTERCARD'];
+// const allowedCardAuthMethods = ['PAN_ONLY', 'CRYPTOGRAM_3DS'];
+
+// GooglePay.setEnvironment(GooglePay.ENVIRONMENT_TEST); // or ENVIRONMENT_PRODUCTION
+
+const requestPayment = async () => {
+  try {
+    const requestData = {
+      cardPaymentMethod: {
+        tokenizationSpecification: {
+          type: 'PAYMENT_GATEWAY',
+          gateway: 'stripe', // e.g. stripe
+          gatewayMerchantId: 'exampleGatewayMerchantId',
+        },
+        allowedCardNetworks,
+        allowedCardAuthMethods,
+      },
+      transaction: {
+        totalPrice: '10.00',
+        totalPriceStatus: 'FINAL',
+        currencyCode: 'USD',
+      },
+      merchantName: 'Example Merchant',
+    };
+
+    const ready = await GooglePay.isReadyToPay(allowedCardNetworks, allowedCardAuthMethods);
+    if (ready) {
+      const token = await GooglePay.requestPayment(requestData);
+      console.log('Payment token', token);
+     
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+///cccavenue
   const initiateCCAvenuePayment = async () => {
     console.log('Starting CCAvenue Payment');
 
@@ -101,38 +140,34 @@ export default function PayDetails({navigation}) {
 
         // Step 5: Prepare final payment payload for native module
         const paymentPayload = {
-          accessCode: 'AVUQ0387HJHEWURB',
-          mId: '65770',
-          currency: String(data.currency || 'AED'),
-          amount: String(data.amount || '500.00'),
-          // redirect_url:
-          //   'https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction',
-          // cancel_url:
-          //   'https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction',
-          order_id: String(data.order_id || '1132387'),
-          tracking_id: String(data.tracking_id || '114070985699'),
-          customer_id: String(data.customer_id || '5656372837'),
-          request_hash: String(data.request_hash || ''),
-          billing_name: String(data.billing_name || 'John Doe'),
-          billing_address: String(data.billing_address || '123 Street'),
-          billing_country: String(data.billing_country || 'India'),
-          billing_state: String(data.billing_state || 'Maharashtra'),
-          billing_city: String(data.billing_city || 'Mumbai'),
-          billing_telephone: String(data.billing_telephone || '9999999999'),
-          billing_email: String(data.billing_email || 'john@example.com'),
-          shipping_name: String(data.shipping_name || 'John Doe'),
-          shipping_address: String(data.shipping_address || '123 Street'),
-          shipping_country: String(data.shipping_country || 'India'),
-          shipping_state: String(data.shipping_state || 'Maharashtra'),
-          shipping_city: String(data.shipping_city || 'Mumbai'),
-          shipping_telephone: String(data.shipping_telephone || '9999999999'),
-          promo: String(data.promo || ''),
-          merchantParam1: String(data.merchantParam1 || ''),
-          merchantParam2: String(data.merchantParam2 || ''),
-          merchantParam3: String(data.merchantParam3 || ''),
-          merchantParam4: String(data.merchantParam4 || ''),
-          merchantParam5: String(data.merchantParam5 || ''),
-        };
+  accessCode: 'AVUQ03GK18BR25QURB',
+  mId: '45990',
+  currency: String(data.currency || 'AED'),
+  amount: String(data.amount || '500.00'),
+  order_id: String(data.order_id || '1132387'),
+  tracking_id: String(data.tracking_id || '114071063547'),
+  customer_id: String(data.customer_id || '5656372837'),
+  request_hash: String(data.requestHash || ''), // ✅ fixed
+  billing_name: String(data.billing_name || 'John Doe'),
+  billing_address: String(data.billing_address || '123 Street'),
+  billing_country: String(data.billing_country || 'India'),
+  billing_state: String(data.billing_state || 'Maharashtra'),
+  billing_city: String(data.billing_city || 'Mumbai'),
+  billing_telephone: String(data.billing_telephone || '9999999999'),
+  billing_email: String(data.billing_email || 'john@example.com'),
+  shipping_name: String(data.shipping_name || 'John Doe'),
+  shipping_address: String(data.shipping_address || '123 Street'),
+  shipping_country: String(data.shipping_country || 'India'),
+  shipping_state: String(data.shipping_state || 'Maharashtra'),
+  shipping_city: String(data.shipping_city || 'Mumbai'),
+  shipping_telephone: String(data.shipping_telephone || '9999999999'),
+  promo: String(data.promo || ''),
+  merchantParam1: String(data.merchantParam1 || ''),
+  merchantParam2: String(data.merchantParam2 || ''),
+  merchantParam3: String(data.merchantParam3 || ''),
+  merchantParam4: String(data.merchantParam4 || ''),
+  merchantParam5: String(data.merchantParam5 || ''),
+};
 
         console.log('Final Payment Payload:', paymentPayload);
 
@@ -288,6 +323,7 @@ export default function PayDetails({navigation}) {
           <Text style={styles.proceedText}>Pay now</Text>
         </TouchableOpacity>
       </View>
+
     </View>
   );
 }
@@ -442,3 +478,59 @@ const styles = StyleSheet.create({
     fontFamily: 'FuturaStdMedium',
   },
 });
+
+
+
+
+
+
+
+// import React from 'react';
+// import { View, Text, StyleSheet, Alert } from 'react-native';
+// import GooglePayComponent from './conp';
+
+// const PaymentScreen = () => {
+//   const handlePaymentSuccess = (result) => {
+//     console.log('Payment successful:', result);
+//     // Handle successful payment - navigate to success screen, update order, etc.
+//   };
+
+//   const handlePaymentError = (error) => {
+//     console.log('Payment failed:', error);
+//     // Handle payment error
+//   };
+
+//   return (
+//     <View style={styles.container}>
+//       <Text style={styles.title}>Complete Your Purchase</Text>
+      
+//       <View style={styles.paymentSection}>
+//         <GooglePayComponent
+//           amount="99.99"
+//           currency="USD"
+//           onSuccess={handlePaymentSuccess}
+//           onError={handlePaymentError}
+//         />
+//       </View>
+//     </View>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     padding: 20,
+//     backgroundColor: '#FFFFFF',
+//   },
+//   title: {
+//     fontSize: 24,
+//     fontWeight: 'bold',
+//     marginBottom: 30,
+//     textAlign: 'center',
+//   },
+//   paymentSection: {
+//     marginTop: 20,
+//   },
+// });
+
+// export default PaymentScreen;

@@ -76,7 +76,7 @@ export default function DrawerNavigator({navigation}) {
             </TouchableOpacity>
 
             {/* Profile Image */}
-            <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+            <TouchableOpacity onPress={() => navigation.navigate('UserDetails')}>
               <Image
                 source={{
                   uri: 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png',

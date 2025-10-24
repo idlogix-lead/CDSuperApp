@@ -11,7 +11,8 @@ import {
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../components/Header/Header';
 
-export default function PayScheduleScrn({navigation}) {
+export default function PayScheduleScrn({navigation,route}) {
+  const pc=route.params;
   const payments = [
     {date: '10 Jan 2025', amount: 'PKR 250,000', status: 'Pending'},
     {date: '10 Feb 2025', amount: 'PKR 250,000', status: 'Overdue'},
@@ -32,7 +33,9 @@ export default function PayScheduleScrn({navigation}) {
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
 
       {/* Header */}
-      <Header title="PAYMENT SCHEDULE" onPress={() => navigation.goBack()} />
+      <Header title="PAYMENT SCHEDULE" onPress={() => navigation.navigate("Drawer")}  onpresimg={()=>navigation.navigate("UserDetails",{
+   pc
+      })}/>
 
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Title */}
