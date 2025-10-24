@@ -13,7 +13,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../components/Header/Header';
 import { processGooglePayPayment, initializeGooglePay } from '../components/conp';
  import ApplePayment from "../components/pay_apple";
- import ApplePayComponent from './applepay';
+ import ApplePayComponent from '../components/applepay';
 
 export default function PayOptions({navigation}) {
  
