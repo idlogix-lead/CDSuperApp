@@ -1,14 +1,32 @@
-import instance from './baseURL';
+import instance from '../BaseURL/BaseUrl';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 class ApiService{
-  static async get(url, params = {}, config = {}) {
-    try {
-      const response = await instance.get(url, { params, ...config });
-      return response.data;
-    } catch (error) {
-      this.handleError(error);
-    }
+static async get(url, params = {}, config = {}) {
+  try {
+    // Manually get token from AsyncStorage
+    const token = await AsyncStorage.getItem('auth_token');
+    console.log('Auth Token:', token);
+
+    // Merge headers with Authorization
+    const finalConfig = {
+      params,
+      ...config,
+      headers: {
+        ...(config.headers || {}),
+        Authorization: token ? `Bearer ${token}` : undefined,
+      },
+    };
+
+    console.log('Final Request Headers:', finalConfig.headers);
+
+    const response = await instance.get(url, finalConfig);
+    return response.data;
+  } catch (error) {
+    this.handleError(error);
   }
+}
+
 
   static async post(url, data = {}, config = {}) {
     try {

@@ -14,6 +14,7 @@ import Header from '../components/Header/Header';
 import { processGooglePayPayment, initializeGooglePay } from '../components/conp';
  import ApplePayment from "../components/pay_apple";
  import ApplePayComponent from '../components/applepay';
+ import {getUsers} from '../Apicall/getid';
 
 export default function PayOptions({navigation}) {
  
@@ -173,7 +174,9 @@ export default function PayOptions({navigation}) {
 
 <TouchableOpacity
   style={styles.proceedBtn}
-  onPress={async () => {
+  onPress=
+  
+  {async () => {
     if (selectedMethod === 'googlepay') {
        const isAvailable = await initializeGooglePay();
         
@@ -190,6 +193,7 @@ export default function PayOptions({navigation}) {
           },
           onError: (error) => {
             console.log('❌ Payment Failed:', error);
+            navigation.navigate('paySucceed');
             // Handle error state here
           }
         });
@@ -203,22 +207,42 @@ export default function PayOptions({navigation}) {
         
       } catch (error) {
         console.log('❌ Payment Error:', error);
-        // Handle any unexpected errors
+      // Handle any unexpected errors
       }
     } else {
+      navigation.navigate("CCAvenueTestPay");
       // Navigate to PayDetails for other payment methods
-      navigation.navigate('PayDetails');
+    //  navigation.navigate('PayDetails');
     }
   }}
 >
   <Text style={styles.proceedText}>Proceed</Text>
 </TouchableOpacity>
+   <TouchableOpacity
+      onPress={handlePress}
+      style={{
+        backgroundColor: '#007bff',
+        padding: 12,
+        borderRadius: 8,
+        alignItems: 'center'
+      }}
+    >
+      <Text style={{ color: '#fff', fontSize: 16 }}>Get Users</Text>
+    </TouchableOpacity>
 
       </ScrollView>
     </View>
   );
 }
-
+const handlePress = async () => {
+    console.log("Button Pressed ✅");
+    try {
+      const data = await getUsers(); // <-- call your API function
+      console.log("API Data:", data);
+    } catch (error) {
+      console.log("Handled Error:", error);
+    }
+  }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
