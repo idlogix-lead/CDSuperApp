@@ -29,7 +29,6 @@ const SignIn = ({navigation}) => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [selectedValue, setSelectedValue] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
   const options = [
     // { label: 'Select Language', value: 'Select Language' },
     {label: 'English', value: 'English'},
@@ -203,35 +202,14 @@ const SignIn = ({navigation}) => {
                   maxLength={9}
                 />
 
-                <View
-                  style={[
-                    styles.input,
-                    {
-                      flexDirection: 'row',
-                      marginTop: 20,
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                    },
-                  ]}>
-                  <TextInput
-                    onChangeText={setPassword}
-                    value={password}
-                    placeholder="Enter your Password"
-                    placeholderTextColor="gray"
-                    style={{color: 'gray'}}
-                    // style={[styles.input, {marginTop: 20}]}
-                    secureTextEntry={!showPassword}
-                  />
-                  <TouchableOpacity
-                    onPress={() => setShowPassword(!showPassword)}
-                    style={styles.eyeIcon}>
-                    <Ionicons
-                      name={showPassword ? 'eye-off' : 'eye'}
-                      size={22}
-                      color="gray"
-                    />
-                  </TouchableOpacity>
-                </View>
+                <TextInput
+                  onChangeText={setPassword}
+                  value={password}
+                  placeholder="Enter your Password"
+                  placeholderTextColor="gray"
+                  style={[styles.input, {marginTop: 20}]}
+                  secureTextEntry
+                />
               </View>
 
               {/* Buttons */}

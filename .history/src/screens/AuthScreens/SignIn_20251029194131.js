@@ -218,7 +218,6 @@ const SignIn = ({navigation}) => {
                     value={password}
                     placeholder="Enter your Password"
                     placeholderTextColor="gray"
-                    style={{color: 'gray'}}
                     // style={[styles.input, {marginTop: 20}]}
                     secureTextEntry={!showPassword}
                   />

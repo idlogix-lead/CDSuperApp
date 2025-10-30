@@ -83,7 +83,6 @@ const VerifyAccount = ({length = 6, resendDelay = 60, navigation, route}) => {
 
   // 🧾 OTP verify handler
   const handleVerify = async () => {
-    const token = await AsyncStorage.getItem('guardnerworld');
     if (!Data || !Data.id) {
       Alert.alert('Error', 'User data not found for OTP verification.');
       return;
@@ -98,6 +97,7 @@ const VerifyAccount = ({length = 6, resendDelay = 60, navigation, route}) => {
       Alert.alert('Error', 'Please enter a valid 6-digit OTP.');
       return;
     }
+    const token = await AsyncStorage.getItem('guardnerworld');
     const payload = {
       AD_User_ID: Data?.id,
       OTP: code,
@@ -154,7 +154,7 @@ const VerifyAccount = ({length = 6, resendDelay = 60, navigation, route}) => {
           Alert.alert('Alert', 'Failed to update password.');
         }
       } else {
-        Alert.alert('Alert', 'Invalid OTP');
+        Alert.alert('Alert', 'Accout not create. Please try again.');
       }
     } catch (error) {
       console.error('Error verifying OTP:', error);

@@ -91,7 +91,6 @@ export default function PayDetails({navigation}) {
         },
       );
 
-      response.data;
       console.log('Backend Response:', response.data);
 
       // Step 4: Parse response
@@ -107,9 +106,9 @@ export default function PayDetails({navigation}) {
           currency: String(data.currency || 'AED'),
           amount: String(data.amount || '500.00'),
           redirect_url:
-            'https://infinitycitidev.duckdns.org/api/v1/processes/ccredirect',
+            'https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction',
           cancel_url:
-            'https://infinitycitidev.duckdns.org/api/v1/processes/cccancel',
+            'https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction',
           order_id: String(data.order_id || '1132387'),
           tracking_id: String(data.tracking_id || '114070985699'),
           customer_id: String(data.customer_id || '5656372837'),

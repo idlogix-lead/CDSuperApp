@@ -28,8 +28,8 @@ const {height, width} = Dimensions.get('window');
 const SignIn = ({navigation}) => {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const [selectedValue, setSelectedValue] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [selectedValue, setSelectedValue] = useState('');
   const options = [
     // { label: 'Select Language', value: 'Select Language' },
     {label: 'English', value: 'English'},
@@ -205,22 +205,22 @@ const SignIn = ({navigation}) => {
 
                 <View
                   style={[
-                    styles.input,
+                    styles.inputContainer,
                     {
-                      flexDirection: 'row',
-                      marginTop: 20,
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
+                      borderColor: password
+                        ? passwordValid
+                          ? 'green'
+                          : 'red'
+                        : 'red',
                     },
                   ]}>
                   <TextInput
-                    onChangeText={setPassword}
-                    value={password}
-                    placeholder="Enter your Password"
+                    placeholder="Password"
                     placeholderTextColor="gray"
-                    style={{color: 'gray'}}
-                    // style={[styles.input, {marginTop: 20}]}
                     secureTextEntry={!showPassword}
+                    value={password}
+                    onChangeText={setPassword}
+                    style={styles.input}
                   />
                   <TouchableOpacity
                     onPress={() => setShowPassword(!showPassword)}
@@ -232,6 +232,15 @@ const SignIn = ({navigation}) => {
                     />
                   </TouchableOpacity>
                 </View>
+
+                {/* <TextInput
+                  onChangeText={setPassword}
+                  value={password}
+                  placeholder="Enter your Password"
+                  placeholderTextColor="gray"
+                  style={[styles.input, {marginTop: 20}]}
+                  secureTextEntry
+                /> */}
               </View>
 
               {/* Buttons */}
@@ -323,18 +332,27 @@ const styles = StyleSheet.create({
   topMiddleText: {
     flexDirection: 'row',
   },
-  input: {
-    width: width / 1.3,
+  inputContainer: {
+    width: '90%',
     height: 40,
-    backgroundColor: '#f8f8f8',
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    color: 'gray',
-    fontFamily: 'K2D-Regular',
+    alignSelf: 'center',
+    marginTop: 15,
     borderWidth: 1,
     borderColor: 'gray',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
   },
-  inpucontainer: {
+  input: {
+    flex: 1,
+    paddingHorizontal: 10,
+    color: '#000',
+    fontFamily: 'FuturaStdBook',
+  },
+  eyeIcon: {
+    paddingHorizontal: 10,
+  },
+  inputContainer: {
     alignItems: 'center',
   },
   heading_text_container: {

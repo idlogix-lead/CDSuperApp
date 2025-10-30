@@ -91,7 +91,6 @@ export default function PayDetails({navigation}) {
         },
       );
 
-      response.data;
       console.log('Backend Response:', response.data);
 
       // Step 4: Parse response

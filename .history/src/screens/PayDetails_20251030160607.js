@@ -91,7 +91,6 @@ export default function PayDetails({navigation}) {
         },
       );
 
-      response.data;
       console.log('Backend Response:', response.data);
 
       // Step 4: Parse response
@@ -107,16 +106,13 @@ export default function PayDetails({navigation}) {
           currency: String(data.currency || 'AED'),
           amount: String(data.amount || '500.00'),
           redirect_url:
-            'https://infinitycitidev.duckdns.org/api/v1/processes/ccredirect',
+            'https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction',
           cancel_url:
-            'https://infinitycitidev.duckdns.org/api/v1/processes/cccancel',
+            'https://secure.ccavenue.ae/transaction/transaction.do?command=initiateTransaction',
           order_id: String(data.order_id || '1132387'),
           tracking_id: String(data.tracking_id || '114070985699'),
           customer_id: String(data.customer_id || '5656372837'),
-          request_hash: String(
-            data.request_hash ||
-              '79cfb298e04a0ec4af3122635625b79a100db01f6cdd7d90a10fe100380543daed533020a0dcd08beec6335dfafb4231c447f230cebfc88301001857cc2d66df',
-          ),
+          request_hash: String(data.request_hash || ''),
           billing_name: String(data.billing_name || 'John Doe'),
           billing_address: String(data.billing_address || '123 Street'),
           billing_country: String(data.billing_country || 'India'),

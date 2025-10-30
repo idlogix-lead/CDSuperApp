@@ -154,7 +154,10 @@ const VerifyAccount = ({length = 6, resendDelay = 60, navigation, route}) => {
           Alert.alert('Alert', 'Failed to update password.');
         }
       } else {
-        Alert.alert('Alert', 'Invalid OTP');
+        Alert.alert(
+          'Alert',
+          'Some reason your Account not create. Please try again.',
+        );
       }
     } catch (error) {
       console.error('Error verifying OTP:', error);

@@ -210,7 +210,6 @@ const SignIn = ({navigation}) => {
                       flexDirection: 'row',
                       marginTop: 20,
                       justifyContent: 'space-between',
-                      alignItems: 'center',
                     },
                   ]}>
                   <TextInput
@@ -218,9 +217,8 @@ const SignIn = ({navigation}) => {
                     value={password}
                     placeholder="Enter your Password"
                     placeholderTextColor="gray"
-                    style={{color: 'gray'}}
                     // style={[styles.input, {marginTop: 20}]}
-                    secureTextEntry={!showPassword}
+                    secureTextEntry
                   />
                   <TouchableOpacity
                     onPress={() => setShowPassword(!showPassword)}
