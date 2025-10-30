@@ -218,18 +218,7 @@ export default function PayOptions({navigation}) {
 >
   <Text style={styles.proceedText}>Proceed</Text>
 </TouchableOpacity>
-   <TouchableOpacity
-      onPress={handlePress}
-      style={{
-        backgroundColor: '#007bff',
-        padding: 12,
-        borderRadius: 8,
-        alignItems: 'center'
-      }}
-    >
-      <Text style={{ color: '#fff', fontSize: 16 }}>Get Users</Text>
-    </TouchableOpacity>
-
+  
       </ScrollView>
     </View>
   );
