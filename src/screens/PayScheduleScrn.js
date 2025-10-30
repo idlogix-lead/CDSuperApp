@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -10,32 +10,73 @@ import {
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../components/Header/Header';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import instance from '../BaseURL/BaseUrl';
 
-export default function PayScheduleScrn({navigation,route}) {
-  const pc=route.params;
-  const payments = [
-    {date: '10 Jan 2025', amount: 'PKR 250,000', status: 'Pending'},
-    {date: '10 Feb 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 Mar 2025', amount: 'PKR 250,000', status: 'Paid'},
-    {date: '10 Apr 2025', amount: 'PKR 250,000', status: 'Paid'},
-    {date: '10 May 2025', amount: 'PKR 250,000', status: 'Paid'},
-    {date: '10 Jun 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 July 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 Aug 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 Sep 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 Oct 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 Nov 2025', amount: 'PKR 250,000', status: 'Overdue'},
-    {date: '10 Dec 2025', amount: 'PKR 250,000', status: 'Overdue'},
-  ];
+export default function PayScheduleScrn({navigation}) {
+  const [payments, setPayments] = useState([]);
+
+  const fetchSummary = async () => {
+    try {
+      const token = await AsyncStorage.getItem('token');
+      const userId = await AsyncStorage.getItem('userId');
+
+      // Get user details
+      const userResponse = await instance.get(`/v1/models/ad_user/${userId}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const user = userResponse.data.FullName;
+      // console.log(user, 'client data');
+      const userName = await AsyncStorage.setItem('userName', user);
+      // console.log(userName, 'user name');
+      const bPartnerId = userResponse.data.C_BPartner_ID?.id;
+      console.log('C_BPartner_ID:', bPartnerId);
+
+      if (!bPartnerId) {
+        console.warn('No Business Partner found for this user.');
+        return;
+      }
+
+      // Fetch summary by C_BPartner_ID
+      const summaryResponse = await instance.get(
+        `/v1/models/MBL_Custinstall_Summary_V?$filter=C_BPartner_ID eq ${bPartnerId}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+
+      console.log('Summary:', summaryResponse.data.records);
+      setPayments(summaryResponse.data.records); // optional
+    } catch (error) {
+      console.error('Error fetching summary:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchSummary();
+  }, []);
+
+  // const logout = async () => {
+  //   try {
+  //     await AsyncStorage.removeItem('token');
+  //     navigation.navigate('SignIn');
+  //   } catch (error) {
+  //     console.error('Error removing token:', error);
+  //   }
+  // };
 
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
 
       {/* Header */}
-      <Header title="PAYMENT SCHEDULE" onPress={() => navigation.navigate("Drawer")}  onpresimg={()=>navigation.navigate("UserDetails",{
-   pc
-      })}/>
+      <Header title="PAYMENT SCHEDULE" onPress={() => navigation.goBack()} />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Title */}
@@ -50,25 +91,12 @@ export default function PayScheduleScrn({navigation,route}) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          {[
-            '10 Jan Paid',
-            '10 Feb Pending',
-            '10 Mar Pending',
-            '10 Apr Pending',
-            '10 May Pending',
-            '10 Jun Pending',
-            '10 July Pending',
-            '10 Aug Pending',
-            '10 Sep Pending',
-            '10 Oct Pending',
-            '10 Nov Pending',
-            '10 Dec Pending',
-          ].map((item, index) => (
+          {payments.map((item, index) => (
             <View
               key={index}
               style={{alignItems: 'center', position: 'relative'}}>
               {/* Line behind circles */}
-              {index < 11 && (
+              {index < payments.length - 1 && (
                 <View
                   style={[
                     styles.line,
@@ -81,49 +109,100 @@ export default function PayScheduleScrn({navigation,route}) {
               <View
                 style={[
                   styles.circle,
-                  index === 0 ? styles.activeCircle : styles.inactiveCircle,
+                  item.OpenAmt > 0
+                    ? styles.inactiveCircle
+                    : styles.activeCircle,
                 ]}>
-                {index === 0 && (
+                {item.OpenAmt <= 0 && (
                   <Ionicons name="checkmark" color="#fff" size={14} />
                 )}
               </View>
 
               {/* Text below circle */}
-              <Text style={styles.timelineText}>{item}</Text>
+              <Text style={styles.timelineText}>
+                {item.DateInvoiced
+                  ? new Date(item.DateInvoiced).toLocaleDateString('en-GB', {
+                      // day: '2-digit',
+                      month: 'short',
+                      year: 'numeric',
+                    })
+                  : ''}
+              </Text>
             </View>
           ))}
         </ScrollView>
 
         {/* Payment Cards */}
         <View style={{flex: 1, alignItems: 'center'}}>
-          {payments.map((pay, index) => (
-            <View
-              key={index}
-              style={[
-                styles.card,
-                pay.status === 'Overdue'
-                  ? styles.cardOverdue
-                  : pay.status === 'Paid'
-                  ? styles.cardPaid
-                  : styles.cardPending,
-              ]}>
-              <View style={styles.cardHeader}>
-                <Text style={styles.dateText}>Date: {pay.date}</Text>
-                <Text
-                  style={[
-                    styles.statusText,
-                    pay.status === 'Paid'
-                      ? styles.statusPaid
-                      : pay.status === 'Overdue'
-                      ? styles.statusOverdue
-                      : styles.statusPending,
-                  ]}>
-                  {pay.status}
+          {payments.map((pay, index) => {
+            const invoiceDate = pay?.DateInvoiced
+              ? new Date(pay.DateInvoiced)
+              : null;
+            const today = new Date();
+
+            // Determine status
+            let status = 'Paid';
+            if (pay?.OpenAmt > 0) {
+              if (invoiceDate && invoiceDate < today) {
+                status = 'Overdue';
+              } else {
+                status = 'Pending';
+              }
+            }
+
+            // Determine card style based on status
+            const cardStyle =
+              status === 'Overdue'
+                ? styles.cardOverdue
+                : status === 'Paid'
+                ? styles.cardPaid
+                : styles.cardPending;
+
+            // Handle card press
+            const handlePress = () => {
+              if (status === 'Pending' || status === 'Overdue') {
+                navigation.navigate('PayOptions', {payment: pay});
+              }
+            };
+
+            return (
+              <TouchableOpacity
+                key={index}
+                activeOpacity={status === 'Paid' ? 1 : 0.7} // no opacity feedback for Paid
+                onPress={handlePress}
+                disabled={status === 'Paid'} // disable press for Paid
+                style={[styles.card, cardStyle]}>
+                <View style={styles.cardHeader}>
+                  <Text style={styles.dateText}>
+                    Date:{' '}
+                    {pay.DateInvoiced
+                      ? new Date(pay.DateInvoiced).toLocaleDateString('en-GB', {
+                          day: '2-digit',
+                          month: 'short',
+                          year: 'numeric',
+                        })
+                      : ''}
+                  </Text>
+
+                  <Text
+                    style={[
+                      styles.statusText,
+                      status === 'Overdue'
+                        ? styles.statusOverdue
+                        : status === 'Pending'
+                        ? styles.statusPending
+                        : styles.statusPaid,
+                    ]}>
+                    {status}
+                  </Text>
+                </View>
+
+                <Text style={styles.amount}>
+                  AED {Number(pay.InvoiceAmt || 0).toFixed(2)}
                 </Text>
-              </View>
-              <Text style={styles.amount}>{pay.amount}</Text>
-            </View>
-          ))}
+              </TouchableOpacity>
+            );
+          })}
         </View>
 
         <TouchableOpacity
@@ -202,9 +281,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#000',
     marginTop: 10,
-    width: '70%',
+    width: '60%',
     fontFamily: 'FuturaStdBook',
-    fontWeight: '400',
   },
 
   card: {
@@ -238,6 +316,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#000',
     marginTop: 8,
-    fontWeight: '600',
   },
 });
