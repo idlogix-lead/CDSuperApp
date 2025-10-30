@@ -1,0 +1,210 @@
+diff --git a/node_modules/react-native-google-pay/android/build.gradle b/node_modules/react-native-google-pay/android/build.gradle
+index 886dc40..17f741d 100644
+--- a/node_modules/react-native-google-pay/android/build.gradle
++++ b/node_modules/react-native-google-pay/android/build.gradle
+@@ -13,12 +13,12 @@ buildscript {
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion 28
++    compileSdkVersion 36
+     buildToolsVersion "28.0.3"
+ 
+     defaultConfig {
+         minSdkVersion 16
+-        targetSdkVersion 28
++        targetSdkVersion 36
+         versionCode 1
+         versionName "1.0"
+     }
+diff --git a/node_modules/react-native-google-pay/android/build/generated/source/buildConfig/androidTest/debug/com/busfor/test/BuildConfig.java b/node_modules/react-native-google-pay/android/build/generated/source/buildConfig/androidTest/debug/com/busfor/test/BuildConfig.java
+deleted file mode 100644
+index 940cfa4..0000000
+--- a/node_modules/react-native-google-pay/android/build/generated/source/buildConfig/androidTest/debug/com/busfor/test/BuildConfig.java
++++ /dev/null
+@@ -1,13 +0,0 @@
+-/**
+- * Automatically generated file. DO NOT MODIFY
+- */
+-package com.busfor.test;
+-
+-public final class BuildConfig {
+-  public static final boolean DEBUG = Boolean.parseBoolean("true");
+-  public static final String APPLICATION_ID = "com.busfor.test";
+-  public static final String BUILD_TYPE = "debug";
+-  public static final String FLAVOR = "";
+-  public static final int VERSION_CODE = 1;
+-  public static final String VERSION_NAME = "1.0";
+-}
+diff --git a/node_modules/react-native-google-pay/android/build/generated/source/buildConfig/debug/com/busfor/BuildConfig.java b/node_modules/react-native-google-pay/android/build/generated/source/buildConfig/debug/com/busfor/BuildConfig.java
+deleted file mode 100644
+index accddfa..0000000
+--- a/node_modules/react-native-google-pay/android/build/generated/source/buildConfig/debug/com/busfor/BuildConfig.java
++++ /dev/null
+@@ -1,13 +0,0 @@
+-/**
+- * Automatically generated file. DO NOT MODIFY
+- */
+-package com.busfor;
+-
+-public final class BuildConfig {
+-  public static final boolean DEBUG = Boolean.parseBoolean("true");
+-  public static final String APPLICATION_ID = "com.busfor";
+-  public static final String BUILD_TYPE = "debug";
+-  public static final String FLAVOR = "";
+-  public static final int VERSION_CODE = 1;
+-  public static final String VERSION_NAME = "1.0";
+-}
+diff --git a/node_modules/react-native-google-pay/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml b/node_modules/react-native-google-pay/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
+deleted file mode 100644
+index bbd736b..0000000
+--- a/node_modules/react-native-google-pay/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/AndroidManifest.xml
++++ /dev/null
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.busfor"
+-    android:versionCode="1"
+-    android:versionName="1.0" >
+-
+-    <uses-sdk
+-        android:minSdkVersion="16"
+-        android:targetSdkVersion="28" />
+-
+-</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-google-pay/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json b/node_modules/react-native-google-pay/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json
+deleted file mode 100644
+index d9c1eb4..0000000
+--- a/node_modules/react-native-google-pay/android/build/intermediates/aapt_friendly_merged_manifests/debug/aapt/output.json
++++ /dev/null
+@@ -1 +0,0 @@
+-[{"outputType":{"type":"AAPT_FRIENDLY_MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0","enabled":true,"outputFile":"android-debug.aar","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.busfor","split":""}}]
+\ No newline at end of file
+diff --git a/node_modules/react-native-google-pay/android/build/intermediates/library_manifest/debug/AndroidManifest.xml b/node_modules/react-native-google-pay/android/build/intermediates/library_manifest/debug/AndroidManifest.xml
+deleted file mode 100644
+index bbd736b..0000000
+--- a/node_modules/react-native-google-pay/android/build/intermediates/library_manifest/debug/AndroidManifest.xml
++++ /dev/null
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.busfor"
+-    android:versionCode="1"
+-    android:versionName="1.0" >
+-
+-    <uses-sdk
+-        android:minSdkVersion="16"
+-        android:targetSdkVersion="28" />
+-
+-</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debug/output.json b/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debug/output.json
+deleted file mode 100644
+index fe80678..0000000
+--- a/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debug/output.json
++++ /dev/null
+@@ -1 +0,0 @@
+-[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0","enabled":true,"outputFile":"android-debug.aar","fullName":"debug","baseName":"debug"},"path":"../../library_manifest/debug/AndroidManifest.xml","properties":{"packageId":"com.busfor","split":""}}]
+\ No newline at end of file
+diff --git a/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml b/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml
+deleted file mode 100644
+index 804a494..0000000
+--- a/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debugAndroidTest/AndroidManifest.xml
++++ /dev/null
+@@ -1,43 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.busfor.test" >
+-
+-    <uses-sdk
+-        android:minSdkVersion="16"
+-        android:targetSdkVersion="28" />
+-
+-    <instrumentation
+-        android:name="android.test.InstrumentationTestRunner"
+-        android:functionalTest="false"
+-        android:handleProfiling="false"
+-        android:label="Tests for com.busfor.test"
+-        android:targetPackage="com.busfor.test" />
+-
+-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Include required permissions for Google Maps API to run. -->
+-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+-    <uses-permission android:name="android.permission.INTERNET" />
+-
+-    <uses-feature
+-        android:glEsVersion="0x00020000"
+-        android:required="true" />
+-
+-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+-
+-    <application
+-        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+-        android:debuggable="true" >
+-        <uses-library android:name="android.test.runner" />
+-
+-        <activity
+-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+-            android:exported="false"
+-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+-
+-        <meta-data
+-            android:name="com.google.android.gms.version"
+-            android:value="@integer/google_play_services_version" />
+-    </application>
+-
+-</manifest>
+\ No newline at end of file
+diff --git a/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debugAndroidTest/output.json b/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debugAndroidTest/output.json
+deleted file mode 100644
+index 176e1f6..0000000
+--- a/node_modules/react-native-google-pay/android/build/intermediates/merged_manifests/debugAndroidTest/output.json
++++ /dev/null
+@@ -1 +0,0 @@
+-[{"outputType":{"type":"MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"1.0","enabled":true,"outputFile":"android-debug-androidTest.apk","fullName":"debugAndroidTest","baseName":"debug-androidTest"},"path":"AndroidManifest.xml","properties":{}}]
+\ No newline at end of file
+diff --git a/node_modules/react-native-google-pay/android/build/outputs/logs/manifest-merger-debug-report.txt b/node_modules/react-native-google-pay/android/build/outputs/logs/manifest-merger-debug-report.txt
+deleted file mode 100644
+index ca3b1e2..0000000
+--- a/node_modules/react-native-google-pay/android/build/outputs/logs/manifest-merger-debug-report.txt
++++ /dev/null
+@@ -1,37 +0,0 @@
+--- Merging decision tree log ---
+-manifest
+-ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-	package
+-		ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:3:11-31
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-	android:versionName
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-	android:versionCode
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:1-4:12
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-	xmlns:android
+-		ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml:2:11-69
+-uses-sdk
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-	android:targetSdkVersion
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-	android:minSdkVersion
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		ADDED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml
+-		INJECTED from /Users/andreysorokin/Documents/GitHub/react-native-google-pay/android/src/main/AndroidManifest.xml

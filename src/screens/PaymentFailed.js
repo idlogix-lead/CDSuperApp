@@ -21,7 +21,7 @@ export default function PaymentFailed() {
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
 
       {/* ✅ Header Section */}
-      <Header title={'PAYMENT OPTIONS'} onPress={() => navigation.goBack()} />
+      {/* <Header title={'PAYMENT OPTIONS'} onPress={() => navigation.goBack()} /> */}
 
       {/* Scrollable content */}
       <View

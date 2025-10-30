@@ -3,7 +3,7 @@ import React from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 // import Navigation from '../../navigation/Navigation';
 
-const Header = ({title, onPress}) => {
+const Header = ({title, onPress, onpresimg}) => {
   return (
     <View>
       <View style={styles.header}>
@@ -19,6 +19,7 @@ const Header = ({title, onPress}) => {
             style={{marginRight: 15}}
           />
           <Image
+          onPress={onpresimg}
             source={require('../../asserts/Images/7084424.png')}
             style={styles.avatar}
           />
