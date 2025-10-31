@@ -11,8 +11,20 @@ import {
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Header from '../components/Header/Header';
-
+import { processGooglePayPayment, initializeGooglePay } from '../components/conp';
+ import ApplePayment from "../components/pay_apple";
+ import ApplePayComponent from '../components/applepay';
+ import {getUsers} from '../Apicall/getid';
 export default function PayOptions({navigation}) {
+    const handlePaymentSuccess = (result) => {
+    console.log('Payment successful:', result);
+    // Handle successful payment - navigate to success screen, update order, etc.
+  };
+
+  const handlePaymentError = (error) => {
+    console.log('Payment failed:', error);
+    // Handle payment error
+  };
   const [selectedMethod, setSelectedMethod] = useState('card');
   // const navigation = useNavigation();
   return (
@@ -104,8 +116,8 @@ export default function PayOptions({navigation}) {
         {[
           {id: 'card', label: 'CC Avenue Debit/Credit Card'},
           {id: 'bank', label: 'Upload Bank Transfer Proof'},
-          {id: 'apple', label: 'Apple Pay'},
-          {id: 'google', label: 'Google Pay'},
+          // {id: 'apple', label: 'Apple Pay'},
+          // {id: 'google', label: 'Google Pay'},
         ].map(method => (
           <TouchableOpacity
             key={method.id}
@@ -125,14 +137,76 @@ export default function PayOptions({navigation}) {
             </View>
             <Text style={styles.methodText}>{method.label}</Text>
           </TouchableOpacity>
+          
+          
         ))}
-
+ <TouchableOpacity
+            key="googlepay"
+            style={[
+              styles.methodBox,
+              selectedMethod === "googlepay" && styles.activeMethod,
+            ]}
+            onPress={() => setSelectedMethod("googlepay")}>
+            <View
+              style={[
+                styles.radioCircle,
+                selectedMethod === "googlepay" && styles.radioSelected,
+              ]}>
+              {selectedMethod === "googlepay" && (
+                <Ionicons name="checkmark" size={16} color="#fff" />
+              )}
+            </View>
+            <Text style={styles.methodText}>Google Pay</Text>
+          </TouchableOpacity>
+         
         {/* Proceed Button */}
-        <TouchableOpacity
-          style={styles.proceedBtn}
-          onPress={() => navigation.navigate('PayDetails')}>
-          <Text style={styles.proceedText}>Proceed</Text>
-        </TouchableOpacity>
+       <TouchableOpacity
+  style={styles.proceedBtn}
+  onPress=
+  
+  {async () => {
+    if (selectedMethod === 'googlepay') {
+       const isAvailable = await initializeGooglePay();
+        
+        if (!isAvailable) {
+          Alert.alert('Error', 'Google Pay is not available on this device');
+          return;
+        }
+      try {
+        // Handle Google Pay payment
+        const result = await processGooglePayPayment(99.99, 'USD', {
+          onSuccess: (successResult) => {
+            console.log('✅ Payment Success:', successResult);
+            // You can also navigate or update state here
+          },
+          onError: (error) => {
+            console.log('❌ Payment Failed:', error);
+            navigation.navigate('paySucceed');
+            // Handle error state here
+          }
+        });
+
+        // If you want to handle success outside callbacks
+        if (result && result.success) {
+          console.log('✅ Payment Success:', result);
+          // Optional: Navigate to success screen
+          // navigation.navigate('PaymentSuccess');
+        }
+        
+      } catch (error) {
+        console.log('❌ Payment Error:', error);
+      // Handle any unexpected errors
+      }
+    } else {
+      navigation.navigate("PayDetails");
+      // Navigate to PayDetails for other payment methods
+    //  navigation.navigate('PayDetails');
+    }
+  }}
+>
+  <Text style={styles.proceedText}>Proceed</Text>
+</TouchableOpacity>
+        
       </ScrollView>
     </View>
   );
