@@ -18,6 +18,7 @@ import PayReminderScrn from '../screens/PayReminderScrn';
 import PayOptions from '../screens/PayOptions';
 import PayDetails from '../screens/PayDetails';
 import PayProof from '../screens/PayProof';
+import CCAvenueTestPay from '../Apicall/cc'
 import PaySucceed from '../screens/PaySucceed';
 import ReceiptsAndStatement from '../screens/ReceiptsAndStatement';
 import PaymentFailed from '../screens/PaymentFailed';
@@ -73,6 +74,7 @@ const Navigation = () => {
         <Stack.Screen name="UserDetails" component={UserDetails} />
         <Stack.Screen name="SetPassword" component={SetPassword} />
         <Stack.Screen name="VerifyAccount" component={VerifyAccount} />
+        <Stack.Screen name="CCAvenueTestPay" component={CCAvenueTestPay} />
         <Stack.Screen name="AccountActive" component={AccountActive} />
         <Stack.Screen name="Passport" component={Passport} />
         <Stack.Screen name="OTP" component={OTP} />

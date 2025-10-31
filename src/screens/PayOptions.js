@@ -211,7 +211,15 @@ export default function PayOptions({navigation}) {
     </View>
   );
 }
-
+const handlePress = async () => {
+    console.log("Button Pressed ✅");
+    try {
+      const data = await getUsers(); // <-- call your API function
+      console.log("API Data:", data);
+    } catch (error) {
+      console.log("Handled Error:", error);
+    }
+  }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
